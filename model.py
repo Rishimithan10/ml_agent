@@ -96,3 +96,5 @@ def load_model():
 
 def get_model():
     return None, None    # not used with Groq
+
+
