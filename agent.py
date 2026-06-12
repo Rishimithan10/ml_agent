@@ -302,6 +302,11 @@ import dagshub
 
 load_dotenv()
 
+
+required = ["MLFLOW_TRACKING_PASSWORD", "PINECONE_KEY", "INDEX_NAME", "TAVILY_KEY", "GROQ_KEY"]
+missing = [k for k in required if not os.getenv(k)]
+if missing:
+    raise RuntimeError(f"Missing env vars: {missing}")
 # ── MLflow + DagsHub Setup ────────────────────────────────────
 os.environ["DAGSHUB_USER_TOKEN"] = os.getenv("MLFLOW_TRACKING_PASSWORD")
 dagshub.init(repo_owner="rishimithan", repo_name="ml_agent", mlflow=True)
