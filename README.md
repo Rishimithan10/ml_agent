@@ -169,7 +169,7 @@ visualizing:
 | Deployment | Average latency | 2.1 s |
 | Deployment | p95 latency | 2.9 s |
 | Fine-tuning | Training data | 279 ML Q&A pairs |
-| Forecasting (sibling project) | XGBoost MAPE | 5.91% |
+
 
 ---
 
